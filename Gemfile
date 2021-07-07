@@ -36,6 +36,9 @@ gem 'haml-rails', '~> 2.0', '>= 2.0.1'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'rspec-rails', '~> 5.0', '>= 5.0.1'
+  gem 'rails-controller-testing', '~> 1.0', '>= 1.0.5'
+   gem 'launchy', '~> 2.5'
 end
 
 group :development do
@@ -57,10 +60,12 @@ end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '>= 3.26'
+  gem 'capybara', '~> 3.35', '>= 3.35.3'
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
+  gem 'shoulda-matchers', '~> 4.5', '>= 4.5.1'
+  gem 'database_cleaner', '~> 2.0', '>= 2.0.1'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
