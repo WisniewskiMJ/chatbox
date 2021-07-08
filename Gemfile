@@ -32,6 +32,7 @@ gem 'faker', '~> 2.17'
 gem 'factory_bot_rails', '~> 6.1'
 gem 'haml', '~> 5.2', '>= 5.2.1'
 gem 'haml-rails', '~> 2.0', '>= 2.0.1'
+gem 'devise-bootstrap-views', '~> 1.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
