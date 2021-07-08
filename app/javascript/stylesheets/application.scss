@@ -3,3 +3,15 @@
 .half-height {
   height: 50vh;
 }
+
+.post-input-field {
+  border: 0;
+  resize: none;
+  height: 2rem;
+}
+
+.post-input-field:focus,
+.post-input-field:active {
+  outline: none !important;
+  box-shadow: none;
+}
