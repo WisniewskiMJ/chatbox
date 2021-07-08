@@ -12,6 +12,6 @@ consumer.subscriptions.create("ChatboxChannel", {
 
   received(data) {
     // Called when there's incoming data on the websocket for this channel
-    console.log(data)
+    $('#message-box').append(data.rendered_msg)
   }
 });
