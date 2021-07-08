@@ -1,13 +1,13 @@
 class MessagesController < ApplicationController
   def index
     @messages = Message.all
-    puts " Lala #{current_user}"
   end
   
   def create
     @message = current_user.messages.new(message_params)
-    @message.save
-    redirect_to messages_url
+    if @message.save
+      ActionCable.server.broadcast("chatbox_channel", { foo: @message.content })
+    end
   end
 
   private
