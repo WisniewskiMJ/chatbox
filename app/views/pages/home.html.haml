@@ -1,2 +1,17 @@
 .container
-  %h1 Root
+  %h1 
+  .row
+    .col-sm-6
+      .card
+        .card-body
+          %h5.card-title Special title treatment
+          %p.card-text With supporting text below as a natural lead-in to additional content.
+          %a.btn.btn-primary{href: "#"} Go somewhere
+    .col-sm-6
+      .card
+        .card-body
+          %h5.card-title Special title treatment
+          %p.card-text With supporting text below as a natural lead-in to additional content.
+          %a.btn.btn-primary{href: "#"} Go somewhere
+
+    = link_to 'Log out', destroy_user_session_url, method: :delete, class: 'btn btn-primary mt-4'
