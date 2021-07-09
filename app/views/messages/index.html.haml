@@ -1,20 +1,19 @@
 .container
   .text-center.mb-5
     %h1 Let's talk
-  .half-height
-    .row.h-100
-      .col-sm-9
-        .card.h-100
-          .card-body
-            .card-text#message-box
-              = render @messages
-          .card-footer.bg-white
-            = render 'message_form'
-      .col-sm-3
-        .card.h-100
-          .card-body
-            .card-text 
-              %h5 Users online
+  .row.h-100
+    .col-sm-9
+      .card.h-100
+        .card-body
+          #message-box.card-text.half-height
+            = render @messages
+        .card-footer.bg-white
+          = render 'message_form'
+    .col-sm-3
+      .card.h-100
+        .card-body
+          .card-text 
+            %h5 Users online
     
 
   = link_to 'Log out', destroy_user_session_url, method: :delete, class: 'btn btn-primary mt-4'

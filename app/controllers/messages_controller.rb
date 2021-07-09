@@ -8,7 +8,6 @@ class MessagesController < ApplicationController
     if @message.save
       ActionCable.server.broadcast("chatbox_channel", { rendered_msg: render_message(@message) })
     end
-    redirect_to root_path
   end
 
   private

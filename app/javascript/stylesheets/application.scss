@@ -1,7 +1,7 @@
 @import 'bootstrap/scss/bootstrap.scss';
 
 .half-height {
-  height: 50vh;
+max-height: 50vh;
 }
 
 .post-input-field {
@@ -14,4 +14,8 @@
 .post-input-field:active {
   outline: none !important;
   box-shadow: none;
+}
+
+#message-box {
+  overflow: auto;
 }

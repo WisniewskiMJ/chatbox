@@ -2,6 +2,7 @@
 // present in this directory. You're encouraged to place your actual application logic in
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
+export { scroll_bottom };
 
 import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
@@ -14,3 +15,14 @@ import "../stylesheets/application"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+
+let scroll_bottom = function() {
+  if ($('#message-box').children.length > 0) {
+    $('#message-box').scrollTop($('#message-box')[0].scrollHeight);
+  }
+};
+
+$(document).on('turbolinks:load', function() {
+  scroll_bottom();
+})
