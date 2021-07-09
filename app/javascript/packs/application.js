@@ -23,6 +23,17 @@ let scroll_bottom = function() {
   }
 };
 
+let send_on_enter = function() {
+  $('#message-content').on('keydown', function(e) {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      $('#send').trigger("click");
+      e.target.value = "";
+    };
+  });
+};
+
 $(document).on('turbolinks:load', function() {
   scroll_bottom();
+  send_on_enter();
 })

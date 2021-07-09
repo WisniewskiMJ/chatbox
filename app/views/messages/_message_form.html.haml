@@ -1,3 +1,3 @@
-= form_with url: messages_url, method: :post,local: false, class: 'd-flex' do |form|
-  = form.text_area 'message[content]', class: 'post-input-field m-0 flex-grow-1'
-  = form.submit 'Send', class: 'btn btn-primary btn-sm'
+= form_with url: messages_url, method: :post,local: false, id: 'message_content', class: 'd-flex' do |form|
+  = form.text_area 'message[content]', id: 'message-content', class: 'post-input-field m-0 flex-grow-1'
+  = form.submit 'Send', id: 'send', class: 'btn btn-primary btn-sm'
