@@ -33,7 +33,16 @@ let send_on_enter = function() {
   });
 };
 
+let clear_on_click = function() {
+  $('#send').on('mouseup', function(e) {
+    e.preventDefault();
+    $('#send').trigger("click");
+    $('#message-content').val("");
+  });
+};
+
 $(document).on('turbolinks:load', function() {
   scroll_bottom();
   send_on_enter();
+  clear_on_click();
 })
